@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const fetch = require('node-fetch')
 require('dotenv').config()
-const toketnRefresh = require('../a/update-token')
 
 /* ==========================================================================
   Set the token
@@ -18,9 +17,9 @@ router.get('/', function(req, res, next) {
   res.render('index')
 });
 
-router.get('/refresh', function(req, res, next) {
-  res.send(toketnRefresh())
-});
+// router.get('/refresh', function(req, res, next) {
+//   res.send(toketnRefresh())
+// });
 
 
 router.post('/notify', function(req, res, next) {
