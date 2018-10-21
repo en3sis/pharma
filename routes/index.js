@@ -101,6 +101,14 @@ router.get('/user/lastpulse', function(req, res, next) {
   .catch(console.log)
 })
 
+router.get('/user/bloodpresure', function(req, res, next) {
+  searchValue([9])
+  .then(data =>  {
+    res.status(200).json(data)
+  })
+  .catch(console.log)
+})
+
 /* ==========================================================================
   Last health data
   ========================================================================== */
